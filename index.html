@@ -1,10 +1,139 @@
 <!DOCTYPE html>
-<html>
-  <head><title> 게시판 연결 실습 </title></head>
-  <body>
-    <hr>
-    <a https://github.com/ffzr8zmdgk-sys/FinalWep/issues/1#issue-6411854051 이슈 게시판 이동 </a>
-    <a href="#" 방명록 이동 </a>
-    <hr>  
-  </body>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean & Mood - 홈카페 전문 쇼핑몰</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 메인페이지 전용 스타일 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&q=80') center/cover;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 { font-size: 38px; margin-bottom: 15px; }
+        .hero p { font-size: 18px; margin-bottom: 25px; }
+        .hero-btn {
+            background-color: #6f4e37;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #332211;
+            border-left: 4px solid #6f4e37;
+            padding-left: 10px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid #e5e0dc;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .product-thumb {
+            height: 180px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-info h3 { font-size: 16px; margin-bottom: 5px; }
+        .product-info p { color: #6f4e37; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <!-- 네비게이션 바 (GNB) -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Bean & Mood</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="guestbook.html" class="active">Guestbook</a></li>
+                <li><a href="notice.html">Customer Center</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="login.html" class="login">로그인</a>
+                <a href="signup.html" class="signup">회원가입</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 메인 히어로 섹션 -->
+    <section class="hero">
+        <h1>오늘의 홈카페를 더 특별하게</h1>
+        <p>엄선된 스페셜티 원두와 감성적인 홈카페 용품을 만나보세요.</p>
+        <a href="shop.html" class="hero-btn">지금 상품 보러가기</a>
+    </section>
+
+    <!-- 메인 콘텐츠 영역 -->
+    <main class="container">
+        <h2 class="section-title">🔥 베스트셀러 상품</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-thumb">원두 이미지</div>
+                <div class="product-info">
+                    <h3>에티오피아 예가체프 싱글오리진</h3>
+                    <p>18,000원</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-thumb">용품 이미지</div>
+                <div class="product-info">
+                    <h3>세라믹 하리오 드리퍼 세트</h3>
+                    <p>24,000원</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-thumb">원두 이미지</div>
+                <div class="product-info">
+                    <h3>콜롬비아 수프리모 블렌드</h3>
+                    <p>16,500원</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-thumb">용품 이미지</div>
+                <div class="product-info">
+                    <h3>스테인리스 수동 핸드 그라인더</h3>
+                    <p>32,000원</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+        <p>&copy; 2026 Bean & Mood. All rights reserved.</p>
+    </footer>
+
+</body>
 </html>
