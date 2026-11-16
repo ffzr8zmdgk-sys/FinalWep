@@ -4,9 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bean & Mood - 홈카페 전문 쇼핑몰</title>
-    <link rel="stylesheet" href="style.css">
     <style>
-        /* 메인페이지 전용 스타일 */
+        /* 공통 초기화 및 기본 레이아웃 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            color: #333;
+            background-color: #fcfbfa;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* --- 네비게이션 바 (GNB) --- */
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid #e5e0dc;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo a {
+            font-size: 24px;
+            font-weight: bold;
+            color: #6f4e37;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 16px;
+            font-weight: 500;
+            color: #555;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #6f4e37;
+            font-weight: bold;
+        }
+
+        .auth-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .auth-links a {
+            font-size: 14px;
+            padding: 8px 14px;
+            border-radius: 4px;
+            border: 1px solid #dcd6d0;
+        }
+
+        .auth-links a.login {
+            background-color: #fff;
+            color: #6f4e37;
+        }
+
+        .auth-links a.signup {
+            background-color: #6f4e37;
+            color: #fff;
+            border-color: #6f4e37;
+        }
+
+        /* --- 메인페이지 전용 스타일 --- */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&q=80') center/cover;
             height: 400px;
@@ -26,6 +112,12 @@
             padding: 12px 28px;
             border-radius: 4px;
             font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
         .section-title {
@@ -65,6 +157,16 @@
 
         .product-info h3 { font-size: 16px; margin-bottom: 5px; }
         .product-info p { color: #6f4e37; font-weight: bold; }
+
+        /* --- 푸터 --- */
+        footer {
+            background-color: #332211;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 80px;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -78,7 +180,7 @@
             <ul class="nav-links">
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="community.html">Community</a></li>
-                <li><a href="guestbook.html" class="active">Guestbook</a></li>
+                <li><a href="guestbook.html">Guestbook</a></li>
                 <li><a href="notice.html">Customer Center</a></li>
             </ul>
             <div class="auth-links">
